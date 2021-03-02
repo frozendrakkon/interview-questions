@@ -189,6 +189,34 @@ console.log([{}] + [{}]) //3
 }
 ```
 
+31.
+
+```js
+
+console.log( ({}).prototype === ({}).__proto__ ) // 1
+
+function some() {}
+console.log( some.prototype === some.__proto__)  // 2
+
+function someOne() {} 
+function someTwo() {}
+console.log(someOne.__proto__ === someTwo.__proto__) // 3
+console.log(someOne.prototype === someTwo.prototype) // 4
+
+let Component = (props) => { 
+  return '<div> Hi </div>'
+}
+console.log(Component.prototype === Object.prototype) //5
+
+let age = 18
+console.log(age.prototype === Number.prototype) //6
+console.log(age.__proto__ === Number.prototype) //7
+
+class Hacker {} 
+console.log(Hacker.__proto__ === Function.prototype) // 8
+
+```
+
 _ответы_
 
 1.  - objects
@@ -250,6 +278,8 @@ _ответы_
 29. - 1)привет 2)привет. В строке \* мы скопировали её значение в переменную func. Обратите внимание (ещё раз): нет круглых скобок после sayHi. Если бы они были, то выражение func = sayHi() записало бы результат вызова sayHi() в переменную func, а не саму функцию sayHi.
 
 30. - 1)"\[object Object][object object]", 2) NaN, 3) "\[object Object][object Object]"
+
+31. 1) 2) 3) 4) 5) 6) 7) 8)
 
 **Задачи**
 
