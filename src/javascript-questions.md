@@ -736,14 +736,39 @@ console.log(b); // 2
         someObj.prototype
         ```
     - свойство __proto__ есть у _всех_ объектов. _Если у нас есть примитив, и мы обращаемся к нему, как к объекту .__proto_/_, то в памяти создается временная объектная версия этого примитива._
-    - _proto каждого ОДИНАКОГО ПО ТИПУ объекта РАВНЫ_. proto чисел равны, proto функций равны, и т.д 
-    - _proto разных по типу объектов, совершенно независимые разные объекты_
-    
-    - __любой объект в js создается с помощью класса-конструктора new__
+        - _proto каждого ОДИНАКОГО ПО ТИПУ объекта РАВНЫ_. proto чисел равны, proto функций равны, и т.д 
+        - _proto разных по типу объектов, совершенно независимые разные объекты_
+        - __любой объект в js создается с помощью класса-конструктора new__
+
+        ```js
+        let promise = new Promise(() => {}) // new Promise(...)
+        let man = {} // new Object(...)
+        ```
+
+      - _любой класс или function имеет prototype_
+      - _любой объект создаеттся с помощью класса или function_
+      - _Каждый prototype - это независимый объект, с определенным набором свойств и методов => Object.prototype !== Promise.prototype!_
+      - _proto любого объекта ссылается на prototype функции-конструктора, с помощью которого этот объект был создан._
+
+      __Зачем же классу нужен прототип, а объекту прото?__
+
+      - _классы нам нужны, чтобы делать однотипные объекты. Если мы попытаемся прочитать свойство объекта, либо вызвать его метод, а данного свойства или метода нет, то объект полезет искать его через ссылку proto в прототип класса, с помощью которого он был создан_
     ```js
-    let promise = new Promise(() => {}) // new Promise(...)
-    let man = {} // new Object(...)
+        let promise = new Promise(() => {}) // Promise prototype
+        let man = {} // Object prototype
+        let users = [] // Array prototype
+        let age = 18 // Number prototype
+        let name = "sega" // String prototype
+        class Animal {} // Function prototype
+        const some = (() => {}) // Function prototype
+        let channell = new Youtube() // Youtube prototype
     ```
+    - Отсюда понимаем
+    ```js
+        let promise = new Promise(() => {}) // promise.__proto__ === Promise.prototype
+        let age = 18 // age.__proto__ === Number.prototype
+    ```
+
 79. **В чем отличие forEach от map?**
 
     - Возвращаемое значение
