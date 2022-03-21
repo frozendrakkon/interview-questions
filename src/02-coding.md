@@ -1,10 +1,15 @@
-# СODGOD
+# Code Questions
 
-**Что выведет? Объясните почему**
+## Что будет в консоли? Объясните почему
+
+[1][text]
+
 ```javascript
 console.log(typeof null);
 // Object
 ```
+
+2
 
 ```js
 var a = {
@@ -18,6 +23,8 @@ a === b;
 //  false, false
 ```
 
+3
+
 ```js
 let word = "Hello";
 const test = (a) => {
@@ -28,6 +35,8 @@ console.log(word);
 // Hello
 ```
 
+4
+
 ```js
 const o = { s: "Hello" };
 const G = (obj) => {
@@ -37,6 +46,8 @@ G(o);
 console.log(o.s);
 // Ura-a-a-h
 ```
+
+5
 
 ```js
 for (var i = 0; i < 3; i++) {
@@ -49,6 +60,8 @@ for (var i = 0; i < 3; i++) {
 // Чтобы поправить - поменять var на let
 ```
 
+6
+
 ```js
 var i = 10;
 function foo(i) {
@@ -58,12 +71,16 @@ foo();
 // undefined
 ```
 
+7
+
 ```js
 const clothes = ["jacket", "t-shirt"];
 clothes.length = 0;
 console.log(clothes[0]);
 // undefined
 ```
+
+8
 
 ```js
 const user = {
@@ -81,37 +98,97 @@ console.log(user.pet.name);
 // sega
 ```
 
+9
+
 ```js
 "" + 1 + 0; // '10'
+```
 
+10
+
+```js
 "" - 1 + 0; // -1
+```
 
+11
+
+```js
 true + false; // 1
+```
 
+12
+
+```js
 6 / "3"; // 2
+```
 
+13
+
+```js
 "2" * "3"; // 6
+```
 
+14
+
+```js
 4 + 5 + "px"; // '9px'
+```
 
+15
+
+```js
 "$" + 4 + 5; '$45'
+```
 
+16
+
+```js
 "4" - 2; // 2
+```
 
+17
+
+```js
 "4px" - 2; // 17
+```
 
+18
+
+```js
 7 / 0 // Infinity
+```
 
+19
+
+```js
 " -9 " + 5; // ' -9 5'
+```
 
+20
+
+```js
 " -9 " - 5; // -14
+```
 
+21
+
+```js
 null + 1; // 1
+```
 
+22
+
+```js
 undefined + 1; // NaN
+```
 
+23
+
+```js
 " \t \n" - 2; // -2
 ```
+
+24
 
 ```js
 let a = 0;
@@ -124,17 +201,19 @@ alert(a == b);
 // true
 ```
 
+25
+
 ```js
 null == undefined; // true
 null === undefined; // false
 ```
-
+26
 ```js
 alert(null > 0); // false
 alert(null == 0); // false
 alert(null >= 0); // true
 ```
-
+27
 ```js
 let i = 0;
 while (++i < 5) alert(i); // 1,2,3,4
@@ -142,7 +221,7 @@ while (++i < 5) alert(i); // 1,2,3,4
 let i = 0;
 while (i++ < 5) alert(i); // 1,2,3,4,5
 ```
-
+28
 ```js
 function sayHi() {
   alert("Привет");
@@ -150,7 +229,7 @@ function sayHi() {
 
 alert(sayHi()); // привет, потом undefined
 ```
-
+29
 ```js
 function sayHi() {
   alert("Привет");
@@ -161,14 +240,15 @@ let func = sayHi;
 func(); // Привет
 sayHi(); // Привет
 ```
-
+30
 ```js
 console.log({} + {}) // "[object Object][object Object]"
 console.log({} - {}) // NaN
 console.log([{}] + [{}]) // "[object Object][object Object]"
 }
 ```
-31.
+
+31
 
 ```js
 
@@ -339,3 +419,5 @@ let newArr = new Array(10).fill(1);
 let randomNum = nums2[Math.floor(Math.random() * nums2.length)];
 console.log(randomNum);
 ```
+### Ответы
+##### <a name="text"></a>
