@@ -2,12 +2,20 @@
 
 ## Что будет в консоли? Объясните почему
 
-[1][text]
+1
 
 ```javascript
 console.log(typeof null);
-// Object
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  Object
+  ```
+
+</details>
 
 2
 
@@ -20,8 +28,17 @@ var b = {
 };
 a == b;
 a === b;
-//  false, false
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false
+  false
+  ```
+
+</details>
 
 3
 
@@ -35,6 +52,14 @@ console.log(word);
 // Hello
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  Hello
+  ```
+
+</details>
 4
 
 ```js
@@ -47,6 +72,14 @@ console.log(o.s);
 // Ura-a-a-h
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  Ura-a-a-h
+  ```
+
+</details>
 5
 
 ```js
@@ -55,11 +88,18 @@ for (var i = 0; i < 3; i++) {
     console.log(i);
   }, 0);
 } 
-// как это поправить?
-// 3, 3, 3
-// Чтобы поправить - поменять var на let
+// почему так происходит, и как это поправить?
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  3, 3, 3
+  Чтобы поправить - поменять var на let
+  ```
+
+</details>
 6
 
 ```js
@@ -68,18 +108,32 @@ function foo(i) {
   console.log(i);
 }
 foo();
-// undefined
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  undefined
+  ```
+
+</details>
 7
 
 ```js
 const clothes = ["jacket", "t-shirt"];
 clothes.length = 0;
 console.log(clothes[0]);
-// undefined
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  undefined
+  ```
+
+</details>
 8
 
 ```js
@@ -95,141 +149,325 @@ const user = {
 Object.freeze(user);
 user.pet.name = "sega";
 console.log(user.pet.name);
-// sega
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  sega
+  ```
+
+</details>
 9
 
 ```js
-"" + 1 + 0; // '10'
+"" + 1 + 0;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  '10'
+  ```
+
+</details>
 10
 
 ```js
-"" - 1 + 0; // -1
+"" - 1 + 0;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  -1
+  ```
+
+</details>
 11
 
 ```js
-true + false; // 1
+true + false;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  1
+  ```
+
+</details>
 12
 
 ```js
-6 / "3"; // 2
+6 / "3";
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  2
+  ```
+
+</details>
 13
 
 ```js
-"2" * "3"; // 6
+"2" * "3";
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  6
+  ```
+
+</details>
 14
 
 ```js
-4 + 5 + "px"; // '9px'
+4 + 5 + "px";
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  '9px'
+  ```
+
+</details>
 15
 
 ```js
-"$" + 4 + 5; '$45'
+"$" + 4 + 5;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  '$45'
+  ```
+
+</details>
 16
 
 ```js
-"4" - 2; // 2
+"4" - 2;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  2
+  ```
+
+</details>
 17
 
 ```js
-"4px" - 2; // 17
+"4px" - 2;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  NaN
+  ```
+
+</details>
 18
 
 ```js
-7 / 0 // Infinity
+7 / 0;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  infinity
+  ```
+
+</details>
 19
 
 ```js
-" -9 " + 5; // ' -9 5'
+" -9 " + 5;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  '-9 5'
+  ```
+
+</details>
 20
 
 ```js
-" -9 " - 5; // -14
+" -9 " - 5;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  -14
+  ```
+
+</details>
 21
 
 ```js
-null + 1; // 1
+null + 1;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  1
+  ```
+
+</details>
 22
 
 ```js
-undefined + 1; // NaN
+undefined + 1;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  NaN
+  ```
+
+</details>
 23
 
 ```js
-" \t \n" - 2; // -2
+" \t \n" - 2;
 ```
 
+<details>
+  <summary>Answer</summary>
+
+  ```
+  -2
+  ```
+
+</details>
 24
 
 ```js
 let a = 0;
-alert(Boolean(a)); // false
+alert(Boolean(a));
 
 let b = "0";
-alert(Boolean(b)); // true
+alert(Boolean(b));
 
 alert(a == b);
-// true
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false
+  true
+  true
+  ```
+
+</details>
 
 25
 
 ```js
-null == undefined; // true
-null === undefined; // false
+null == undefined;
+null === undefined;
 ```
+<details>
+  <summary>Answer</summary>
+
+  ```
+  true
+  false
+  ```
+
+</details>
+
 26
+
 ```js
-alert(null > 0); // false
-alert(null == 0); // false
-alert(null >= 0); // true
+alert(null > 0);
+alert(null == 0);
+alert(null >= 0);
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false
+  false
+  true
+  ```
+
+</details>
+
 27
+
 ```js
 let i = 0;
-while (++i < 5) alert(i); // 1,2,3,4
+while (++i < 5) alert(i);
 
 let i = 0;
-while (i++ < 5) alert(i); // 1,2,3,4,5
+while (i++ < 5) alert(i);
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  1,2,3,4
+  1,2,3,4,5
+  ```
+
+</details>
+
 28
+
 ```js
 function sayHi() {
   alert("Привет");
 }
 
-alert(sayHi()); // привет, потом undefined
+alert(sayHi());
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  Привет, потом undefined
+  ```
+
+</details>
+
 29
+
 ```js
 function sayHi() {
   alert("Привет");
@@ -237,16 +475,39 @@ function sayHi() {
 
 let func = sayHi;
 
-func(); // Привет
-sayHi(); // Привет
+func();
+sayHi();
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  Привет
+  Привет
+  ```
+
+</details>
+
 30
+
 ```js
 console.log({} + {}) // "[object Object][object Object]"
 console.log({} - {}) // NaN
 console.log([{}] + [{}]) // "[object Object][object Object]"
 }
 ```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  [object Object][object Object]
+  NaN
+  [object Object][object Object]
+  ```
+
+</details>
 
 31
 
@@ -276,55 +537,6 @@ console.log(Hacker.__proto__ === Function.prototype) // true
 
 ```
 
-**Задачи**
-
-1. Есть массив чисел, нужно найти максимальное число
-
-2. Есть список строк, найти те, которые являются палиндромами
-
-3. Напишите рекурсивную функцию на примере поиска чисел Фибоначчи. На вход функция получает порядковый номер числа, а возвращает само число
-
-4. Развернуть одномерный массив без создания дополнительного массива [1, 2, 3 ,4] => [4, 3, 2, 1]
-
-5. Напишите решение задачи FizzBuzz
-
-6. Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
-
-7. Напишите код, который выводит все простые числа из интервала от 2 до n.
-
-8. Есть матрица
-
-   - [ [1, 4, 8, 9,],
-   - [6, 2, 11, 1,],
-   - [8, 0, 3, -5,],
-   - [-2, 10, 8, 1] ]`
-   - вывести на экран числа, находящиеся под главной диагональю матрицы
-
-9. Используя конструкцию if..else, напишите код, который получает число через prompt, а затем выводит в alert:
-
-   - 1, если значение больше нуля,
-   - -1, если значение меньше нуля,
-   - 0, если значение равно нулю.
-   - Предполагается, что пользователь вводит только числа.
-
-10. - Есть объект salaries, в котором указаны зарплаты сотрудников - sergei: 500, roma: 300... Нужно написать код, который суммирует зарплаты всех сотрудников, если объект пустой, то возвращается 0
-
-11. - Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2, не числовые оставляет без изменений.
-
-12. - Создайте объект calculator (калькулятор) с тремя методами:
-    - read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
-    - sum() (суммировать) возвращает сумму сохранённых значений.
-    - mul() (умножить) перемножает сохранённые значения и возвращает результат.
-
-    ```js
-    let calculator = {
-      // ... ваш код ...
-    };
-
-    calculator.read();
-    alert(calculator.sum());
-    alert(calculator.mul());
-    ```
 
 **Приведение типов**
 
@@ -419,5 +631,3 @@ let newArr = new Array(10).fill(1);
 let randomNum = nums2[Math.floor(Math.random() * nums2.length)];
 console.log(randomNum);
 ```
-### Ответы
-##### <a name="text"></a>
