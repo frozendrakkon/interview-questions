@@ -49,7 +49,6 @@ const test = (a) => {
 };
 test(word);
 console.log(word);
-// Hello
 ```
 
 <details>
@@ -69,7 +68,6 @@ const G = (obj) => {
 };
 G(o);
 console.log(o.s);
-// Ura-a-a-h
 ```
 
 <details>
@@ -398,6 +396,7 @@ alert(a == b);
 null == undefined;
 null === undefined;
 ```
+
 <details>
   <summary>Answer</summary>
 
@@ -492,9 +491,9 @@ sayHi();
 30
 
 ```js
-console.log({} + {}) // "[object Object][object Object]"
-console.log({} - {}) // NaN
-console.log([{}] + [{}]) // "[object Object][object Object]"
+console.log({} + {});
+console.log({} - {});
+console.log([{}] + [{}]); 
 }
 ```
 
@@ -510,6 +509,166 @@ console.log([{}] + [{}]) // "[object Object][object Object]"
 </details>
 
 31
+
+```js
+[1, 2] + [3, 4];
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  1,23,4
+  ```
+
+</details>
+32
+
+```js
+++2;
+
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  3
+  ```
+
+</details>
+33
+
+```js
+2++;
+
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  2
+  ```
+
+</details>
+34
+
+```js
+"5" > 3;
+
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  true
+  ```
+
+</details>
+35
+
+```js
+"sega" - 5;
+
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  NaN
+  ```
+
+</details>
+36
+
+```js
+  const one = “1”;
+  const two = “2”;
+  console.log(+one + +two);
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  3
+  ```
+
+</details>
+37
+
+```js
+  undefined > 0;
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false т.к undefined приводит к NaN == false
+  ```
+
+</details>
+38
+
+```js
+  null == undefined;
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  true
+  ```
+
+</details>
+39
+
+```js
+  null > 0;
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false
+  ```
+
+</details>
+40
+
+```js
+  "se" + "ga";
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  'sega'
+  ```
+
+</details>
+41
+
+```js
+  NaN === NaN;
+```
+
+<details>
+  <summary>Answer</summary>
+
+  ```
+  false
+  ```
+
+</details>
+42
 
 ```js
 
@@ -537,97 +696,12 @@ console.log(Hacker.__proto__ === Function.prototype) // true
 
 ```
 
-
-**Приведение типов**
-
-```js
-"1" + 2; //12
-"7" + "7"; //14
-[1, 2] + [3, 4]; //1,23,4
-++2; // 3
-2++; // 2
-"5" > 3; // true
-"sega" - 5; //NaN
-
-
-const one = “1”;
-const two = “2”;
-console.log(+one + +two) // 3
-
-undefined > 0; //false т.к undefined приводит к NaN == false
-null == undefined; // true
-null > 0; // false
-"se" + "ga"; // sega
-NaN === NaN; // false
-```
-
-**численное преобразование**
+### численное преобразование
 
 - undefined = NaN
 - null = 0
 - true/false = 1/0
 
-**Логическое преобразование Boolean**
+### Логическое преобразование Boolean
 
-- undefined = false
-- number = true, кроме 0 и NaN
-- string = true, кроме ""
-- object = true
-- "0" === true
-
-  **Работа с массивами**
-
-```js
-let cars = ["Honda", "Toyota", "Feat", "Opel"];
-let nums = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 55, 70];
-let nums2 = [1, 4, 3, 5, 6, 2, 10, 35];
-let arr = [0, false, undefined, null, "", true, 1, "sss", NaN];
-
-// сумма чисел массива
-let sum = nums.reduce((x, y) => x + y);
-console.log(sum);
-
-//удалить ложные значения в массиве
-let newArr = arr.filter(Boolean);
-console.log(newArr);
-
-// конвертировать массив в объект
-let obj = { ...cars };
-console.log(obj);
-
-// Удалить повторяющиеся элементы в массиве
-let uniNums = [...new Set(nums)];
-
-// Заменить значение в массиве
-cars.splice(0, 2, "Nissan", "Tesla");
-console.log(cars);
-
-// перебор массива без метода map
-let newCars = [
-  { car: "Honda", color: "Red" },
-  { car: "Toyota", color: "Green" },
-  { car: "Feat", color: "Yellow" },
-  { car: "Tesla", color: "Pink" },
-];
-let carName = Array.from(newCars, ({ car }) => car);
-console.log(newCars);
-
-// Очистить массив
-nums.splice(0, nums.length);
-console.log(nums);
-
-// найти пересечения массивов из чисел
-let newNums = [...new Set(nums)].filter((item) => nums2.includes(item));
-console.log(newNums);
-
-// найти индекс последнего вхождения числа
-let lastIndex = nums.lastIndexOf(1);
-console.log(lastIndex);
-
-// способ создания массива с одинаковыми элементами
-let newArr = new Array(10).fill(1);
-
-// найти случайное число из массива
-let randomNum = nums2[Math.floor(Math.random() * nums2.length)];
-console.log(randomNum);
-```
+Значения, которые приводятся к false: **0, -0, false, NaN, null, undefined, ''**
