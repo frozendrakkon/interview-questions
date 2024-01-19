@@ -694,6 +694,18 @@ console.log(Hacker.__proto__ === Function.prototype) // true
 
 ```
 
+```js
+
+const fn = (a,b) => console.log(a + b)
+
+const cx = fn.bind(null, 10)
+
+fn(2,3) // 5
+cx(4,6) // 14
+
+const cx = fn.bind(ob1j).bind(obj2)
+```
+
 ### численное преобразование
 
 - undefined = NaN
